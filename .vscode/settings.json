@@ -37,6 +37,7 @@
   "files.associations": {
     "*.js": "javascript",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iosfwd": "cpp"
   }
 }
