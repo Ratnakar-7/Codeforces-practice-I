@@ -289,27 +289,28 @@ std::string to_lower(std::string str)
 {
     std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c)
                    { return std::tolower(c); });
-      return str;
+    return str;
 }
-    void solve()
+void solve()
+{
+    long long int n, x;
+    cin >> n;
+    while (n)
     {
-        long long int n;
-        cin >> n;
-        if (n < 26)
-            cout << "NO";
+        if (n % 10 == 1)
+            n = n / 10;
+        else if (n % 100 == 14)
+            n /= 100;
+        else if (n % 1000 == 144)
+            n /= 1000;
         else
         {
-            string s;
-            set<char> x;
-            cin >> s;
-            s = to_lower(s);
-            rep(i,s.size()) x.insert(s[i]);
-            if(x.size()==26)cout<<"YES";
-            else cout<<"NO";
-            
+            cout<<"NO";
+            return;
         }
     }
-
+    cout<<"YES";
+}
 
 signed main()
 {

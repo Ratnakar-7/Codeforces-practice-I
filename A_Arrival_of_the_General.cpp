@@ -213,10 +213,7 @@ int dy[4] = { 0,1,0,-1 };
 
 
 void solve() {
-	long long int arri[4];
-    rep(i,4) cin>>arri[i];
-    sort(arri,arri+4);
-    cout<<arri[3]-arri[0]<<" "<<arri[3]-arri[1]<<" "<<arri[3]-arri[2]<<" ";
+	
 
 }
 

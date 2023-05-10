@@ -289,27 +289,19 @@ std::string to_lower(std::string str)
 {
     std::transform(str.begin(), str.end(), str.begin(), [](unsigned char c)
                    { return std::tolower(c); });
-      return str;
+    return str;
 }
-    void solve()
-    {
-        long long int n;
-        cin >> n;
-        if (n < 26)
-            cout << "NO";
-        else
-        {
-            string s;
-            set<char> x;
-            cin >> s;
-            s = to_lower(s);
-            rep(i,s.size()) x.insert(s[i]);
-            if(x.size()==26)cout<<"YES";
-            else cout<<"NO";
-            
-        }
-    }
-
+void solve()
+{
+    int a,b,n,m,k=0;
+cin>>n>>m;
+for(a=0;a*a<=n;a++)
+{b=n-a*a;
+if(m==b*b+a)
+k++;
+}
+cout<<k;
+}
 
 signed main()
 {
@@ -320,7 +312,9 @@ signed main()
     // init();
     // expr();
     // while(true)
-    // int t; cin >> t; rep(i, t)
-    solve();
+    // int t;
+    // cin >> t;
+    // rep(i, t)
+        solve();
     return 0;
 }
